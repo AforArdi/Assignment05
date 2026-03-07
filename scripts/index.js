@@ -84,28 +84,28 @@ const displayForModalClick=(issue)=>{
     
     modalDetailsContainer.innerHTML = `
         <h3 class="text-lg font-bold">${issue.title}</h3>
-            <div class="flex gap-2">
-                <div class="badge badge-soft badge-success text-[12px] font-medium">${issue.status}</div>
+            <div class="flex items-center gap-2">
+                <div class="badge badge-soft badge-success text-[16px] font-bold">${issue.status}</div>
                 &bull;
-                <p>Opened by ${issue.author? issue.author : 'Author not Found'}</p>
+                <p class="text-[#64748B] text-[12px]">Opened by ${issue.author? issue.author : 'Author not Found'}</p>
                 &bull;
-                <p>${issue.createdAt}</p>
+                <p class="text-[#64748B] text-[12px]">${issue.createdAt}</p>
             </div>
             <div class="flex gap-2">
                 <div class="flex gap-2">
                     ${labels}
                 </div>
             </div>
-            <p class="line-clamp-3">${issue.description}</p>
+            <p class="line-clamp-3 text-[#64748B] text-[16px]">${issue.description}</p>
             <div class=" bg-[#F8FAFC] mx-auto p-4 rounded-md">
                 <div class="flex justify-between items-center">
                     <div>
-                        <h2>Assignee:</h2>
-                        <p>${issue.assignee ? issue.assignee : 'Assignee not Found'}</p>
+                        <h2 class="text-[#64748B] text-[16px]">Assignee:</h2>
+                        <p class="font-semibold text-[16px] text-[#1F2937]">${issue.assignee ? issue.assignee : 'Assignee not Found'}</p>
                     </div>
                     <div>
-                        <h2>Priority:</h2>
-                        <div class="badge badge-soft badge-warning text-[12px] font-medium">${issue.priority}</div>
+                        <h2 class="text-[#64748B] text-[16px]">Priority:</h2>
+                        <div class="badge badge-soft badge-warning text-[16px] font-bold">${issue.priority}</div>
                     </div>
                 </div>
             </div>
