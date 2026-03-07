@@ -44,19 +44,21 @@
     </header>
 
     <main>
+        <!-- main 3 buttons to toggle -->
         <section>
             <!-- bg-[#E4E4E7] -->
-             <!-- main 3 buttons to toggle -->
             <div class="flex gap-3 w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
                 <button class="btn btn-soft btn-primary">All</button>
                 <button class="btn btn-soft btn-primary">Open</button>
                 <button class="btn btn-soft btn-primary">Closed</button>
             </div>
+        </section>
 
-            <!-- status -->
+        <!-- status -->
+        <section>
             <div class="flex items-center justify-between w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
                 <!-- logo + status -->
-                 <div class="flex items-center">
+                <div class="flex items-center">
                     <div class="w-[50px]">
                         <img src="./assets/Aperture.png" alt="">
                     </div>
@@ -64,10 +66,10 @@
                         <p class="font-semibold text-[20px]"><span>50</span> Issues</p>
                         <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
                     </div>
-                 </div>
-
-                 <!-- open and closed color status -->
-                  <div class="flex gap-2">
+                </div>
+                
+                <!-- open and closed color status -->
+                <div class="flex gap-2">
                     <div class="flex gap-1 items-center">
                         <i class="fa-solid fa-circle" style="color: #00a96e;"></i>
                         <p>Open</p>
@@ -76,9 +78,31 @@
                         <i class="fa-solid fa-circle" style="color: #A855F7;"></i>
                         <p>Closed</p>
                     </div>
-                  </div>
+                </div>
             </div>
         </section>
+
+        <!-- issues rendering section -->
+         <section id="all-issues-container" class="w-11/12 mx-auto mt-8 grid grid-cols-4 gap-4">
+            <!-- demo card -->
+            <!-- <div class="card bg-base-100 w-72 shadow-sm">
+                <div class="card-body">
+                    <div class="badge badge-soft badge-warning text-[12px] font-medium">High</div>
+                    <h2 class="font-semibold text-[14px]">Fix navigation menu on mobile devices</h2>
+                    <p class="line-clamp-2 text-[12px] text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                    <div class="flex gap-2">
+                        <div class="badge badge-warning text-[12px] font-medium">Bug</div>
+                        <div class="badge badge-warning text-[12px] font-medium">Help Wanted</div>
+                    </div>
+                    <hr>
+                    <p class="text-[12px] text-[#64748B]">#1 by john_doe</p>
+                    <p class="text-[12px] text-[#64748B]">1/15/2024</p>
+                </div>
+            </div> -->
+        </section>
     </main>
+
+    <!-- js angta -->
+     <script src="./scripts/index.js"></script>
 </body>
 </html>
