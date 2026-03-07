@@ -2,7 +2,16 @@ const allIssuesContainer = document.getElementById('all-issues-container');
 const btnAll = document.getElementById('btn-all');
 const btnOpen = document.getElementById('btn-open');
 const btnClosed = document.getElementById('btn-closed');
+const issueCount = document.getElementById('issueCount');
 let allIssues = [];
+let currentTotalIssues = 0;
+
+const issuesCount=(arr)=>{
+    currentTotalIssues = arr.length;
+    // console.log(currentTotalIssues);
+    issueCount.textContent = currentTotalIssues;
+
+}
 
 // btn related functions
 const removeActiveClass=()=>{
@@ -22,18 +31,21 @@ const setActiveBtn=(btn)=>{
 btnAll.addEventListener('click', () => {
     setActiveBtn(btnAll);
     displayIssues(allIssues);
+    issuesCount(allIssues)
 });
 
 btnOpen.addEventListener('click', () => {
     setActiveBtn(btnOpen);
     const openIssues = allIssues.filter(issue => issue.status === 'open');
     displayIssues(openIssues);
+    issuesCount(openIssues)
 });
 
 btnClosed.addEventListener('click', () => {
     setActiveBtn(btnClosed);
     const closedIssues = allIssues.filter(issue => issue.status === 'closed');
     displayIssues(closedIssues);
+    issuesCount(closedIssues)
 });
 
 
