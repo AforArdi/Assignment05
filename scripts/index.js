@@ -73,12 +73,12 @@ btnSearch.addEventListener('click', ()=>{
 const loadForModalClick=async(id)=>{
     const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
     const data = await res.json();
-    displayForModalClick(data);
+    displayForModalClick(data.data);
 }
 const displayForModalClick=(issue)=>{
     // console.log(issue.data);
     const modalDetailsContainer = document.getElementById('modal-details-container');
-    const labels = issue.data.labels.map(label => {
+    const labels = issue.labels.map(label => {
         return `<div class="badge badge-warning text-[12px] font-medium whitespace-nowrap">${label}</div>`;
     }).join('');
     
