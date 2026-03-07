@@ -2,9 +2,10 @@ const allIssuesContainer = document.getElementById('all-issues-container');
 const btnAll = document.getElementById('btn-all');
 const btnOpen = document.getElementById('btn-open');
 const btnClosed = document.getElementById('btn-closed');
-const issueCount = document.getElementById('issueCount');
 let allIssues = [];
 let currentTotalIssues = 0;
+const issueCount = document.getElementById('issueCount');
+const btnSearch = document.getElementById('btn-search');
 
 const issuesCount=(arr)=>{
     currentTotalIssues = arr.length;
@@ -31,23 +32,43 @@ const setActiveBtn=(btn)=>{
 btnAll.addEventListener('click', () => {
     setActiveBtn(btnAll);
     displayIssues(allIssues);
-    issuesCount(allIssues)
+    issuesCount(allIssues);
 });
-
 btnOpen.addEventListener('click', () => {
     setActiveBtn(btnOpen);
     const openIssues = allIssues.filter(issue => issue.status === 'open');
     displayIssues(openIssues);
     issuesCount(openIssues)
 });
-
 btnClosed.addEventListener('click', () => {
     setActiveBtn(btnClosed);
     const closedIssues = allIssues.filter(issue => issue.status === 'closed');
     displayIssues(closedIssues);
-    issuesCount(closedIssues)
+    issuesCount(closedIssues);
 });
 
+// fetch('https://openapi.programming-hero.com/api/words/all')
+//     .then((res)=> res.json())
+//     .then((data)=> {
+//         const allWords = data.data;
+//         const filteredWords = allWords.filter((word)=>
+//             word.word.toLowerCase().includes(inputValue)
+//         );
+//         displayWord(filteredWords);
+//     })
+
+// search related functionality
+btnSearch.addEventListener('click', ()=>{
+    const searchInput = document.getElementById('input-search');
+    const searchInputValue = searchInput.value.trim().toLowerCase();
+    fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchInputValue}`)
+        .then((res)=> res.json())
+        .then((data)=>{
+            allIssues = data.data;
+            displayIssues(allIssues);
+            issuesCount(allIssues);
+        })
+})
 
 
 // loading all isues from API
