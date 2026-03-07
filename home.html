@@ -45,12 +45,13 @@
 
     <main>
         <!-- main 3 buttons to toggle -->
-        <section>
+        <section id="all-btn">
             <!-- bg-[#E4E4E7] -->
             <div class="flex gap-3 w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
-                <button class="btn btn-soft btn-primary">All</button>
-                <button class="btn btn-soft btn-primary">Open</button>
-                <button class="btn btn-soft btn-primary">Closed</button>
+                <!-- NOTE for myself: see here how all is selected initially -->
+                <button id="btn-all" class="btn btn-primary">All</button>
+                <button id="btn-open" class="btn btn-outline">Open</button>
+                <button id="btn-closed" class="btn btn-outline">Closed</button>
             </div>
         </section>
 
