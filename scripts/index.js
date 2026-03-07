@@ -87,7 +87,7 @@ const displayForModalClick=(issue)=>{
             <div class="flex gap-2">
                 <div class="badge badge-soft badge-success text-[12px] font-medium">${issue.status}</div>
                 &bull;
-                <p>Opened by ${issue.author}</p>
+                <p>Opened by ${issue.author? issue.author : 'Author not Found'}</p>
                 &bull;
                 <p>${issue.createdAt}</p>
             </div>
@@ -101,7 +101,7 @@ const displayForModalClick=(issue)=>{
                 <div class="flex justify-between items-center">
                     <div>
                         <h2>Assignee:</h2>
-                        <p>${issue.assignee}</p>
+                        <p>${issue.assignee ? issue.assignee : 'Assignee not Found'}</p>
                     </div>
                     <div>
                         <h2>Priority:</h2>
