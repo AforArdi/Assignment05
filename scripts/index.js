@@ -6,6 +6,7 @@ let allIssues = [];
 let currentTotalIssues = 0;
 const issueCount = document.getElementById('issueCount');
 const btnSearch = document.getElementById('btn-search');
+const spinner = document.getElementById('spinner');
 
 const issuesCount=(arr)=>{
     currentTotalIssues = arr.length;
@@ -38,7 +39,7 @@ btnOpen.addEventListener('click', () => {
     setActiveBtn(btnOpen);
     const openIssues = allIssues.filter(issue => issue.status === 'open');
     displayIssues(openIssues);
-    issuesCount(openIssues)
+    issuesCount(openIssues);
 });
 btnClosed.addEventListener('click', () => {
     setActiveBtn(btnClosed);
@@ -57,8 +58,21 @@ btnClosed.addEventListener('click', () => {
 //         displayWord(filteredWords);
 //     })
 
+// spinner manager
+const managerSpinner=(status)=>{
+    if(status == true){
+        spinner.classList.remove('hidden');
+        allIssuesContainer.classList.add('hidden');
+    }else{
+        allIssuesContainer.classList.remove('hidden');
+        spinner.classList.add('hidden');
+    }
+}
+
+
 // search related functionality
 btnSearch.addEventListener('click', ()=>{
+    managerSpinner(true);
     const searchInput = document.getElementById('input-search');
     const searchInputValue = searchInput.value.trim().toLowerCase();
     fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchInputValue}`)
@@ -67,6 +81,7 @@ btnSearch.addEventListener('click', ()=>{
             allIssues = data.data;
             displayIssues(allIssues);
             issuesCount(allIssues);
+            managerSpinner(false);
         })
 })
 // modal loading data and showing data related functionaltiy
@@ -122,10 +137,12 @@ const displayForModalClick=(issue)=>{
 
 // loading all isues from API
 const loadIssues = async ()=>{
+    managerSpinner(true);
     const res = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issues');
     const issues = await res.json();
     allIssues = issues.data;
     displayIssues(allIssues);
+    managerSpinner(false);
 };
 // showing loaded issues
 const displayIssues=(issues)=>{
