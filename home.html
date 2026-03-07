@@ -23,7 +23,7 @@
 
     <title>Github Issue Tracker | Home</title>
 </head>
-<body>
+<body class="bg-[#E4E4E7]">
     <header>
         <div class="navbar bg-base-100 shadow-sm flex justify-between">
             <div class="flex items-center gap-2">
@@ -45,10 +45,38 @@
 
     <main>
         <section>
-            <div class="flex gap-3 w-11/12 mx-auto mt-8 p-5 rounded-2xl bg-[#E4E4E7]">
+            <!-- bg-[#E4E4E7] -->
+             <!-- main 3 buttons to toggle -->
+            <div class="flex gap-3 w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
                 <button class="btn btn-soft btn-primary">All</button>
                 <button class="btn btn-soft btn-primary">Open</button>
                 <button class="btn btn-soft btn-primary">Closed</button>
+            </div>
+
+            <!-- status -->
+            <div class="flex items-center justify-between w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
+                <!-- logo + status -->
+                 <div class="flex items-center">
+                    <div class="w-[50px]">
+                        <img src="./assets/Aperture.png" alt="">
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[20px]"><span>50</span> Issues</p>
+                        <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
+                    </div>
+                 </div>
+
+                 <!-- open and closed color status -->
+                  <div class="flex gap-2">
+                    <div class="flex gap-1 items-center">
+                        <i class="fa-solid fa-circle" style="color: #00a96e;"></i>
+                        <p>Open</p>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <i class="fa-solid fa-circle" style="color: #A855F7;"></i>
+                        <p>Closed</p>
+                    </div>
+                  </div>
             </div>
         </section>
     </main>
