@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- tailwind + DaisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- styles css -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Github Issue Tracker | Home</title>
 </head>
 <body>
-    <h1>logged in</h1>
+    <header>
+        <div class="navbar bg-base-100 shadow-sm flex justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-9">
+                    <img src="./assets/github-logo.png" alt="">
+                </div>
+                <h2 class="font-semibold text-xl">GitHub Issues Tracker</h2>
+            </div>
+
+            <div class="flex gap-2">
+                <input id="input-search" type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                <div class="navbar-end">
+                    <a id="btn-search" class="btn btn-primary">Search</a>
+                </div>
+                </div>
+            </div>
+            </div>
+    </header>
+
+    <main>
+        <section>
+            
+        </section>
+    </main>
 </body>
 </html>
