@@ -151,6 +151,12 @@ const displayIssues=(issues)=>{
     issues.forEach(issue => {
         // console.log(issue);
         const issueCard = document.createElement('div');
+        // adding top border, based on status
+        if(issue.status == 'open'){
+            issueCard.classList.add('status-open-border');
+        }else{
+            issueCard.classList.add('status-closed-border');
+        }
         const labels = issue.labels.map(label => {
             return `<div class="badge badge-warning text-[12px] font-medium whitespace-nowrap">${label}</div>`;
         }).join('');
