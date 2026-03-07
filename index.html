@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- tailwind + DaisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- styles css -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Github Issue Tracker</title>
+</head>
+<body class="bg-[#E4E4E7]">
+    <main>
+        <section class="bg-white min-h-screen max-w-md mx-auto flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center justify-center gap-1">
+                <div class="w-[100px] pt-20 mx-auto">
+                    <img src="./assets/github-logo.png" alt="">
+                </div>
+                <h2 class="font-semibold text-2xl">GitHub Issues Tracker</h2>
+                <p class="text-[16px] text-[#64748B]">Sign in to manage your issues</p>
+            </div>
+            <div>
+                <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-[420px] border p-4">
+                    <label class="label font-medium text-[16px] text-[#1F2937]">Username</label>
+                    <input id="input-username" type="text" class="input w-full" placeholder="Enter Username" />
+                    <label class="label text-[#4A00FF]">Default: admin</label>
+                    
+                    <label class="label font-medium text-[16px] text-[#1F2937]">Password</label>
+                    <input id="input-password" type="password" class="input w-full" placeholder="Enter Password" />
+                    <label class="label text-[#4A00FF]">Default: admin123</label>
+                    
+                    <button id="btn-signup" class="btn btn-primary mt-4">Sign In</button>
+                </fieldset>
+            </div>
+        </section>
+    </main>
+
+    <!-- js anfta -->
+     <script src="./scripts/login.js"></script>
+</body>
+</html>
