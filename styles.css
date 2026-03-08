@@ -2,12 +2,12 @@
     font-family: "Geist", sans-serif;
 }
 .status-open-border {
-  border-top: 5px solid #00A96E;
+  border-top: 4px solid #00A96E;
   border-radius: 12px;
   width: 288px;
 }
 .status-closed-border {
-  border-top: 5px solid #A855F7;
+  border-top: 4px solid #A855F7;
   border-radius: 12px;
   width: 288px;
 }

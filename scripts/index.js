@@ -162,15 +162,13 @@ const displayIssues=(issues)=>{
         }).join('');
 
         issueCard.innerHTML = `
-            <div onclick="loadForModalClick(${issue.id})" class="card bg-base-100 w-72 h-70 shadow-sm cursor-pointer">
+            <div onclick="loadForModalClick(${issue.id})" class="card bg-base-100 w-full h-80 shadow-sm cursor-pointer">
                 <div class="card-body">
                     <div class="badge badge-soft badge-warning text-[12px] font-medium">${issue.priority}</div>
                     <h2 class="font-semibold text-[14px]">${issue.title}</h2>
                     <p class="line-clamp-3 text-justify text-[12px] text-[#64748B]">${issue.description}</p>
-                    <div class="flex gap-2">
-                        <div class="flex gap-2">
-                            ${labels}
-                        </div>
+                    <div class="flex flex-wrap gap-2">
+                        ${labels}
                     </div>
                     <hr>
                     <p class="text-[12px] text-[#64748B]">#${issue.id} by ${issue.author}</p>

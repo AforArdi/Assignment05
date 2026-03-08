@@ -56,7 +56,7 @@
 
         <!-- status -->
         <section>
-            <div class="flex items-center justify-between w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
+            <div class="flex flex-col gap-2 md:flex-row items-center md:justify-between w-11/12 mx-auto mt-8 p-5 rounded-md bg-white">
                 <!-- logo + status -->
                 <div class="flex items-center">
                     <div class="w-[50px]">
@@ -86,8 +86,9 @@
         <section class="flex justify-center items-center">
             <span id="spinner" class="loading loading-dots loading-xl hidden"></span>
         </section>
+
         <!-- issues rendering section -->
-         <section id="all-issues-container" class="w-11/12 mx-auto mt-8 grid grid-cols-4 gap-4">
+         <section id="all-issues-container" class="w-11/12 mx-auto mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             <!-- demo card -->
             <!-- <div class="card bg-base-100 w-72 shadow-sm">
                 <div class="card-body">
