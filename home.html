@@ -25,7 +25,7 @@
 </head>
 <body class="bg-[#E4E4E7]">
     <header>
-        <div class="navbar bg-base-100 shadow-sm flex justify-between">
+        <div class="navbar bg-base-100 shadow-sm flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
             <div class="flex items-center gap-2">
                 <div class="w-9">
                     <img src="./assets/github-logo.png" alt="">
@@ -35,11 +35,10 @@
 
             <div class="flex gap-2">
                 <input id="input-search" type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                <div class="navbar-end">
-                    <a id="btn-search" class="btn btn-primary">Search</a>
+
+                <button id="btn-search" class="btn btn-primary">Search</button>
+
                 </div>
-                </div>
-            </div>
             </div>
     </header>
 
